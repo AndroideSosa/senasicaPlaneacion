@@ -1,0 +1,148 @@
+    
+<form [formGroup]="datosIE" (ngSubmit)="saveData()">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Datos Instancia Ejecutora</h4>
+            <hr class="red">
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Misión:</label>
+                <textarea   class="form-control" 
+                            rows="3"
+                            formControlName="mision">
+                </textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Visión:</label>
+                <textarea   class="form-control" 
+                            rows="3" 
+                            formControlName="vision">
+                </textarea>
+            </div>
+        </div> 
+        <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre de la Instancia Ejecutora:</label>
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="nombreInstancia">
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="telefono">
+                </div>
+        </div>
+        <div class="col-md-3">
+                <label>Estatus:</label>
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="checkbox" name="inlineRadioOptions" id="inlineRadio1" checked disabled>Vigente
+                    </label>
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="form-group">
+                    <label>RFC:</label>
+                    <input type="text" class="form-control">
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="form-group">
+                    <label>Fecha de vigencia de Autorización:</label>
+                    <div class="input-group">
+                        <input class="form-control"  value="" type="text">
+                        <div class="input-group-addon"> 
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="form-group">
+                    <label>Año de Registro:</label>
+                    <input type="text" class="form-control"  value="">
+                </div>
+        </div>
+        <div class="col-md-6">
+                <div class="form-group">
+                    <label>Clave de Registro / Autorización:</label>
+                    <input type="text" class="form-control"  value="">
+                </div>
+        </div>
+        <div class="col-md-12">
+                <h4>Mesa Directiva</h4>
+                <hr class="red">
+        </div>
+        <div class="col-md-4">
+                <div class="form-group">
+                    <label>El Presidente:</label>
+                    <input type="text" class="form-control"  value="">
+                </div>
+        </div>
+        <div class="col-md-4">
+                <div class="form-group">
+                    <label>El Secretario:</label>
+                    <input type="text" class="form-control"  value="">
+                </div>
+        </div>
+        <div class="col-md-4">
+                <div class="form-group">
+                    <label>El Tesorero:</label>
+                    <input type="text" class="form-control"  value="">
+                </div>
+        </div>
+        <div class="col-md-12">
+                <h4>Carga de Documentos</h4>
+                <hr class="red">
+        </div>
+        <div class="col-md-6">
+                <div class="form-group">
+                    <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Acta Constitutiva
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Acta de Mesa Directiva
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Oficio de Autorización
+                    </label>
+                </div>
+        </div>
+        <div class="col-md-8">
+                <div class="form-group">
+                <div class="input-group input-file" name="Fichier1">			
+                        <span class="input-group-btn">
+                            <input type="file">
+                        </span>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+                <div class="form-group">
+                    <!-- <span class="btn-hidden"></span> -->
+                    <button     type="button" 
+                                class="btn btn-danger btn-block"
+                                [disabled]= "showResetFormButton == false" 
+                                (click)="resetForm()" >
+                                Limpiar campos
+                    </button>
+                </div>
+                <div class="form-group">
+                        <!-- <span class="btn-hidden"></span> -->
+                        <button type="submit" 
+                                class="btn btn-primary btn-block" 
+                               [disabled] ="!datosIE.valid">
+                                Enviar a Validación
+                        </button>
+                </div>
+        </div>
+    </div>
+    {{datosIE.valid}}
+</form>
