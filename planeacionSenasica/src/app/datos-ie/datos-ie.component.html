@@ -43,31 +43,37 @@
                 <label>Estatus:</label>
                 <div class="form-group">
                     <label class="radio-inline">
-                        <input type="checkbox" name="inlineRadioOptions" id="inlineRadio1" checked disabled>Vigente
+                        <input type="checkbox" 
+                               name="estatus" 
+                               id="inlineRadio1" 
+                               formControlName="estatus"> 
+                               Vigente
                     </label>
                 </div>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
                     <label>RFC:</label>
-                    <input type="text" class="form-control">
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="rfc">
                 </div>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
                     <label>Fecha de vigencia de Autorización:</label>
-                    <div class="input-group">
-                        <input class="form-control"  value="" type="text">
-                        <div class="input-group-addon"> 
-                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                        </div>
-                    </div>
+                        <input  type="text" 
+                                class="form-control"
+                                placeholder="dd/mm/aaaa" 
+                                formControlName="fecha">
                 </div>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
                     <label>Año de Registro:</label>
-                    <input type="text" class="form-control"  value="">
+                    <input type="text" 
+                           class="form-control"
+                           formControlName="anioRegistro">
                 </div>
         </div>
         <div class="col-md-6">

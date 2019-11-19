@@ -6,7 +6,7 @@ export interface DatosIE {
     telefono: number;
     estatus: boolean;
     rfc: string;
-    fecha: Date;
+    fecha: string;
     anioRegistro: number;
     claveAutorizacion: string;
     tipoDocumento: string;

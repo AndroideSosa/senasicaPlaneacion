@@ -21,7 +21,12 @@ export class DatosIEComponent implements OnInit {
       'vision': new FormControl( '', Validators.required),
       'nombreInstancia': new FormControl( '', Validators.required),
       'telefono': new FormControl( '', [Validators.required,
-                                        Validators.pattern(/^[0-9]+$/)]) 
+                                        Validators.pattern(/^[0-9]+$/)]),
+      'estatus': new FormControl( '', Validators.required),
+      'rfc': new FormControl( '', Validators.required),
+      'fecha': new FormControl( '', [Validators.required,
+                                     Validators.pattern(/^(31[ \/ ](0[13578]|1[02])[ \/ ](18|19|20)[0-9]{2})|((29|30)[\/](01|0[3-9]|1[1-2])[\/](18|19|20)[0-9]{2})|((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[0-2])[\/](18|19|20)[0-9]{2})|(29[\/](02)[\/](((18|19|20)(04|08|[2468][048]|[13579][26]))|2000))$/)]),
+      'anioRegistro': new FormControl( '', Validators.required)   
     })
 
     //Escuchar cambios dentro del formulario
