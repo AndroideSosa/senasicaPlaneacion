@@ -64,7 +64,8 @@
                     <label>Fecha de vigencia de Autorización:</label>
                         <input  type="text" 
                                 class="form-control"
-                                placeholder="dd/mm/aaaa" 
+                                placeholder="dd/mm/aaaa"
+                                [textMask]="{mask: dateMask}" 
                                 formControlName="fecha">
                 </div>
         </div>
@@ -79,7 +80,9 @@
         <div class="col-md-6">
                 <div class="form-group">
                     <label>Clave de Registro / Autorización:</label>
-                    <input type="text" class="form-control"  value="">
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="claveAutorizacion">
                 </div>
         </div>
         <div class="col-md-12">

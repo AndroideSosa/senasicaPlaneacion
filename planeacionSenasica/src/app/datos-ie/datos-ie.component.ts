@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
+
 @Component({
   selector: 'app-datos-ie',
   templateUrl: './datos-ie.component.html',
@@ -10,6 +11,7 @@ export class DatosIEComponent implements OnInit {
 
   public datosIE: FormGroup;
   public showResetFormButton: boolean= false;
+  public dateMask = [/\d/, /\d/,'/',/\d/, /\d/,'/',/\d/,/\d/,/\d/,/\d/];
 
   constructor() { 
 
@@ -26,7 +28,8 @@ export class DatosIEComponent implements OnInit {
       'rfc': new FormControl( '', Validators.required),
       'fecha': new FormControl( '', [Validators.required,
                                      Validators.pattern(/^(31[ \/ ](0[13578]|1[02])[ \/ ](18|19|20)[0-9]{2})|((29|30)[\/](01|0[3-9]|1[1-2])[\/](18|19|20)[0-9]{2})|((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[0-2])[\/](18|19|20)[0-9]{2})|(29[\/](02)[\/](((18|19|20)(04|08|[2468][048]|[13579][26]))|2000))$/)]),
-      'anioRegistro': new FormControl( '', Validators.required)   
+      'anioRegistro': new FormControl( '', Validators.required),
+      'claveAutorizacion': new FormControl( '', Validators.required)   
     })
 
     //Escuchar cambios dentro del formulario
