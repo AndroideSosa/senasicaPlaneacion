@@ -9,6 +9,9 @@ export interface DatosIE {
     fecha: string;
     anioRegistro: number;
     claveAutorizacion: string;
+    presidente: string;
+    secretario: string;
+    tesorero: string;
     tipoDocumento: string;
     archivo: File;
 } 

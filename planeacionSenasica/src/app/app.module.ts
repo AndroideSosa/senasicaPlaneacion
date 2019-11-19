@@ -8,12 +8,14 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { PlantillasComponent } from './plantillas/plantillas.component';
 import { DatosIEComponent } from './datos-ie/datos-ie.component';
+import { ObserveFilesDirective } from './directives/observe-files.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlantillasComponent,
-    DatosIEComponent
+    DatosIEComponent,
+    ObserveFilesDirective
   ],
   imports: [
     BrowserModule,

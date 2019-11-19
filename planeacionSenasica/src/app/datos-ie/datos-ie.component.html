@@ -92,19 +92,25 @@
         <div class="col-md-4">
                 <div class="form-group">
                     <label>El Presidente:</label>
-                    <input type="text" class="form-control"  value="">
+                    <input  type="text" 
+                            class="form-control"  
+                            formControlName="presidente">
                 </div>
         </div>
         <div class="col-md-4">
                 <div class="form-group">
                     <label>El Secretario:</label>
-                    <input type="text" class="form-control"  value="">
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="secretario">
                 </div>
         </div>
         <div class="col-md-4">
                 <div class="form-group">
                     <label>El Tesorero:</label>
-                    <input type="text" class="form-control"  value="">
+                    <input  type="text" 
+                            class="form-control"
+                            formControlName="tesorero">
                 </div>
         </div>
         <div class="col-md-12">
@@ -114,13 +120,13 @@
         <div class="col-md-6">
                 <div class="form-group">
                     <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Acta Constitutiva
+                    <input type="radio" name="tipoDocumento" id="inlineRadio1" value="Acta Constitutiva" formControlName="tipoDocumento"> Acta Constitutiva
                     </label>
                     <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Acta de Mesa Directiva
+                    <input type="radio" name="tipoDocumento" id="inlineRadio2" value="Acta de Mesa Directiva" formControlName="tipoDocumento"> Acta de Mesa Directiva
                     </label>
                     <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Oficio de Autorización
+                    <input type="radio" name="tipoDocumento" id="inlineRadio3" value="Oficio de Autorizacion" formControlName="tipoDocumento"> Oficio de Autorización
                     </label>
                 </div>
         </div>
@@ -128,7 +134,12 @@
                 <div class="form-group">
                 <div class="input-group input-file" name="Fichier1">			
                         <span class="input-group-btn">
-                            <input type="file">
+                            <input  type="file"
+                                    name="archivo"
+                                    accept="application/pdf,application"
+                                    class="form-control"
+                                    (change)="onFileChange($event)"
+                                    formControlName="archivo">
                         </span>
                     </div>
                 </div>
